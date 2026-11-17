@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio d'Emma – Accessoires de scène</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== 1. ACCUEIL ========== -->
+  <section id="accueil" class="ecran actif">
+    <h1>Bienvenue dans le portfolio d'Emma</h1>
+
+    <div class="scene-accueil">
+      <!-- La grande boîte en carton -->
+      <button id="boite" class="boite" aria-label="Ouvrir la boîte pour commencer la construction">
+        <div id="pieces"></div>
+        <div id="carnet-sortant" class="carnet-mini">📖</div>
+        <div class="rabat rabat-gauche"></div>
+        <div class="rabat rabat-droit"></div>
+        <div class="face-boite">
+          <span>Ouvrez la boîte<br>pour commencer<br>la construction</span>
+        </div>
+      </button>
+
+      <!-- La petite boîte à outils / papier -->
+      <button id="outils" class="outils" aria-label="Contact">
+        <span class="outils-icone">🧰</span>
+        <span class="outils-texte">Contact</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Fenêtre de contact (ouverte par la boîte à outils) -->
+  <div id="contact-modal" class="modal" hidden>
+    <div class="papier">
+      <button class="fermer" id="fermer-contact" aria-label="Fermer">✕</button>
+      <h2>Contact</h2>
+      <ul>
+        <li>✉️ <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a></li>
+        <li>📷 <a href="#">Instagram</a></li>
+        <li>💼 <a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== 2. LE CARNET (portfolio) ========== -->
+  <section id="carnet" class="ecran">
+    <div class="livre" id="livre">
+
+      <article class="page">
+        <h2>Étape 1 – Le projet</h2>
+        <img src="images/accessoire1.png" alt="Description de l'accessoire 1" onerror="this.style.display='none'">
+        <p>Ici, tu présentes ton premier accessoire : pour quelle pièce, quels matériaux, combien de temps…</p>
+        <button class="coin" aria-label="Page suivante"></button>
+      </article>
+
+      <article class="page">
+        <h2>Étape 2 – Un autre accessoire</h2>
+        <!-- Exemple de vidéo : remplace par ton fichier ou un lien -->
+        <video controls width="100%" poster="" preload="none">
+          <source src="videos/demo.mp4" type="video/mp4">
+        </video>
+        <p>Texte qui explique la fabrication.</p>
+        <button class="coin" aria-label="Page suivante"></button>
+      </article>
+
+      <article class="page">
+        <h2>Étape 3 – Dernier projet</h2>
+        <p>Tu peux ajouter autant de pages que tu veux : copie un bloc &lt;article class="page"&gt; entier.</p>
+        <button class="coin" aria-label="Terminer le carnet"></button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========== 3. LE MEUBLE FINAL ========== -->
+  <section id="fin" class="ecran">
+    <div class="meuble">
+      <div class="tiroir"><span>✉️ Mail</span> <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a></div>
+      <div class="tiroir"><span>📷 Instagram</span> <a href="#">@ton_compte</a></div>
+      <div class="tiroir"><span>💼 LinkedIn</span> <a href="#">ton profil</a></div>
+    </div>
+    <div class="chibi" title="Ton chibi ici !">🧑‍🎨</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
